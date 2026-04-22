@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package dfs;
+
+// Serviço que roda no Worker (DataNode)
+service DataNode {
+  // Recebe um stream de chunks do cliente e retorna um status
+  rpc UploadFile(stream Chunk) returns (UploadStatus) {}
+  
+  // Recebe o nome de um arquivo e retorna um stream de chunks
+  rpc DownloadFile(FileRequest) returns (stream Chunk) {}
+}
+
+message Chunk {
+  string filename = 1;
+  bytes payload = 2;
+}
+
+message UploadStatus {
+  bool success = 1;
+  string message = 2;
+}
+
+message FileRequest {
+  string filename = 1;
+}
