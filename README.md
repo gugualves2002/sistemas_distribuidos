@@ -1,6 +1,6 @@
 Relatório Técnico - Marco 1: Fundação do Sistema de Arquivos Distribuídos (DFS)
 1. Arquitetura do Sistema (Estado Atual)
-  Neste primeiro marco, a arquitetura estabelece a fundação de comunicação e persistência do sistema, operando temporariamente em uma topologia Cliente-Servidor com um único nó de armazenamento (DataPlane).
+Neste primeiro marco, a arquitetura estabelece a fundação de comunicação e persistência do sistema, operando temporariamente em uma topologia Cliente-Servidor com um único nó de armazenamento (DataPlane).
 
 Os componentes atuais são:
 
